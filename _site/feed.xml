@@ -5,9 +5,20 @@
     <description>Blogging about stuffs</description>
     <link>blog url//</link>
     <atom:link href="blog url//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 21 Nov 2016 12:28:51 -0200</pubDate>
-    <lastBuildDate>Mon, 21 Nov 2016 12:28:51 -0200</lastBuildDate>
+    <pubDate>Mon, 21 Nov 2016 12:32:20 -0200</pubDate>
+    <lastBuildDate>Mon, 21 Nov 2016 12:32:20 -0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>ola</title>
+        <description>&lt;p&gt;Desisti a varios anos de fazer um blog ocm jekyll mas agr avhei um app para android então ne&lt;/p&gt;
+</description>
+        <pubDate>Wed, 16 Nov 2016 00:00:00 -0200</pubDate>
+        <link>blog url//2016/11/16/ola.html</link>
+        <guid isPermaLink="true">blog url//2016/11/16/ola.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Hello World!</title>
