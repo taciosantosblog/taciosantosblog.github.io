@@ -1,6 +1,6 @@
-name: Your New Jekyll Site
-description: Blogging about stuffs
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
+name: Blog do Tacio
+description: Programação, Design & Educação
+meta_description: "Programação, Design & Educação"
 
 markdown: kramdown
 highlighter: pygments

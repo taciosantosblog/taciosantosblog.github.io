@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title></title>
-    <description>Blogging about stuffs</description>
+    <description>Programação, Design &amp; Educação</description>
     <link>blog url//</link>
     <atom:link href="blog url//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 23 Nov 2016 12:28:19 -0200</pubDate>
-    <lastBuildDate>Wed, 23 Nov 2016 12:28:19 -0200</lastBuildDate>
+    <pubDate>Wed, 23 Nov 2016 12:31:19 -0200</pubDate>
+    <lastBuildDate>Wed, 23 Nov 2016 12:31:19 -0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
