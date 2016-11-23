@@ -5,10 +5,10 @@ date: 2016-11-23 12:00:00 -0300
 layout: post
 description: Post introdutorio ao site
 tags: 
--motivacao
--mensagem
+- motivacao
+- mensagem
 categories:
--mensagem
+- mensagem
 disqus: true
 permalink : /ola-mundo/
 ---
