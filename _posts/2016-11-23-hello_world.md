@@ -1,8 +1,16 @@
 ---
 title: Ola Mundo!
-author: tacio santos
+author: Tacio Santos
+date: 2016-11-23 12:00:00 -0300
 layout: post
+description: Post introdutorio ao site
+tags: 
+-motivacao
+-mensagem
+categories:
+-mensagem
 disqus: true
+permalink : /ola-mundo/
 ---
 
 #### Há Muito tempo em uma galaxia muito distante...
@@ -15,6 +23,6 @@ Estou aqui montando este blog hj para tentar prover **de forma gratuita** o supo
 
 Sei que não é facil começar a estudar programação, muitos na verdade desistem, mas estou aqui disponível para sanar todas as dúvidas que forem possiveis.
 
-Um bom dia e uma boa caminhada pelos caminhos do desenvolvimento.
+Um bom dia e uma boa caminhada pelos caminhos do desenvolvimento!
 
 *Tacio Santos*
