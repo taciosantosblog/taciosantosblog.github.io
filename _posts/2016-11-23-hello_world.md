@@ -10,7 +10,7 @@ tags:
 categories:
 - mensagem
 disqus: true
-permalink : /ola-mundo/
+permalink : /posts/ola-mundo/
 ---
 
 #### Há Muito tempo em uma galaxia muito distante...
