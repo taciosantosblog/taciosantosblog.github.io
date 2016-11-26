@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<title>PlayerHTML5 | Part1 - Example3</title> 
+	<script src="js/jquery.min.js"></script>
+<body>
+<audio id = "audio" controls>
+	<source src="Roller_Genoa_-_Safe_and_Warm_in_Hunter_s_Arms.mp3" type="audio/mpeg">
+</audio>
+</br>
+<button id="play">Play</button>
+<button id="pause">pause</button>
+<button id="stop">stop</button>
+<button id="mais">+</button>
+<button id="menos">-</button>
+<button id="mudo">mudo</button>
+
+
+<script>
+
+$(document).ready(function(){
+	audio = document.getElementById('audio');
+
+	$("#play").click(function(){
+		audio.play();
+	});
+	$("#pause").click(function(){
+		audio.pause();
+	});
+	$("#stop").click(function(){
+		audio.pause();
+		audio.currentTime = 0;
+	});
+	$("#mais").click(function(){
+		if( audio.volume < 1) audio.volume += 0.1;
+	});
+	$("#menos").click(function(){
+		if( audio.volume > 0) audio.volume -= 0.1;
+	});
+	$("#mudo").click(function(){
+		if(audio.muted){
+			audio.muted = false;
+		} else {
+			audio.muted = true;
+		}
+	});
+});
+</script>
+
+
+</body>
+</html>
+
