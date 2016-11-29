@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+	<title>PlayerHTML5 | Post2 - Example1</title> 
+	<script src="js/jquery.min.js"></script>
+	<style>
+	</style>
+<body>
+<audio id = "audio" controls>
+	<source src="Roller_Genoa_-_Safe_and_Warm_in_Hunter_s_Arms.mp3" type="audio/mpeg">
+</audio>
+</br>
+<button id="play-pause">Play</button>
+<input id="time"type="range" min="0" max="400" step="1" value="0">
+<button id="mudo">mudo</button>
+<input id="vol"type="range" min="0" max="1" step="0.1" value="1">
+
+<script>
+
+$(document).ready(function(){
+	audio = document.getElementById('audio');
+	time = document.getElementById('time');
+	$("#play-pause").click(function(){
+		time.max = audio.duration;
+		setInterval("atualizaTime()", 30);
+		if(audio.paused){
+			audio.play();
+			$("#play-pause").text("pause");
+		} else {
+			audio.pause();
+			$("#play-pause").text("play");
+		}
+	});
+	$("#time").change(function(){
+
+		audio.currentTime = $("#time").val();
+	});
+	$("#mudo").click(function(){
+		if(audio.muted){
+			audio.muted = false;
+		} else {
+			audio.muted = true;
+		}
+	});
+	$("#vol").change(function(){
+
+		audio.volume = $("#vol").val();
+	});
+	
+	
+atualizaTime = function(){
+	$("#time").val(audio.currentTime);
+}
+
+});
+
+
+</script>
+
+
+</body>
+</html>
+
