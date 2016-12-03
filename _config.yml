@@ -1,6 +1,7 @@
 name: Blog do Tacio
 description: Programação, Design & Educação
 meta_description: "Programação, Design & Educação"
+hreflang: "pt-br";
 
 markdown: kramdown
 highlighter: pygments
