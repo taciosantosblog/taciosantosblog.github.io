@@ -5,9 +5,361 @@
     <description>Programação, Design &amp; Educação</description>
     <link>https://taciosantosblog.github.io///</link>
     <atom:link href="https://taciosantosblog.github.io///feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Nov 2016 20:09:35 -0200</pubDate>
-    <lastBuildDate>Sat, 26 Nov 2016 20:09:35 -0200</lastBuildDate>
+    <pubDate>Tue, 06 Dec 2016 09:18:10 -0200</pubDate>
+    <lastBuildDate>Tue, 06 Dec 2016 09:18:10 -0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Montando um player com js e css.</title>
+        <description>&lt;p&gt;&lt;strong&gt;Neste tutorial você vai aprender a montar um player para o seu site com javascript.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;mas-por-que-criar-um-player-com-js&quot;&gt;Mas por que criar um player com js?&lt;/h2&gt;
+
+&lt;p&gt;Simples: Design. Você pode querer um player que seja visualmente mais semelhante as linhas de design do seu site, ou que tenha a mesma aparência em todos os navegadores.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/player2/player-chrome.png&quot; alt=&quot;Figura1: Player html5 no chrome&quot; title=&quot;Player html5 no chrome&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/player2/player-firefox.png&quot; alt=&quot;Figura1: Player html5 no firefox&quot; title=&quot;Player html5 no firefox&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Como você pode ver nas imagens acima o player do chrome e do fairefox são muito diferentes, e também podem não combinar muito com o design do seu site.&lt;/p&gt;
+
+&lt;h2 id=&quot;montando-o-player&quot;&gt;Montando o player&lt;/h2&gt;
+
+&lt;p&gt;Se você ja leu o nosso post sobre &lt;a href=&quot;/posts/manipular-player-html5-com-js/&quot; title=&quot;Como manipular player Html5 com JavaScript&quot;&gt;as funções javascript aplicadas ao player&lt;/a&gt; você ja deve entender praticamente todos os arquivo abaixo: a única mudança e o uso do &lt;code&gt;intput[type=range]&lt;/code&gt; para controlar o volume e o progresso do audio.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/taciosantosblog/34b53fc93608831e968afda123dd0c2a.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://gist.github.com/taciosantosblog/e1b20a68d6be2460c76f7026dd2e703f.js&quot;&gt;&lt;/script&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/taciosantosblog/playerHTML5-blog/tree/master/playerHTML5/post2/example1&quot; target=&quot;_blank&quot;&gt;Link do projeto no github.&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;../../examples/manipular-player-html5-com-js/playerHTML5/post2/example1/&quot; target=&quot;_blank&quot;&gt; Demo &lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Como foi possível ver na demo do projeto acima, nos tivemos alguns pequenos bugs:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;O controle parece estar meio “doido”&lt;/li&gt;
+  &lt;li&gt;O range de volume não zera ao ser acionado o mute.&lt;/li&gt;
+  &lt;li&gt;Está muito feio!!!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;melhorando-o-controle-de-progresso-do-player&quot;&gt;Melhorando o controle de progresso do player&lt;/h3&gt;
+
+&lt;p&gt;E meio confuso mais vou tentar explicar: o valor do range e atualizado constantemente, o que inclui o tempo em que você está clicando no seletor do range. Para corrigir isto nos vamos cancelar esta atualização durante o periodo do click, com jquery.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/taciosantosblog/174f39235722c81d4af8fadf58aab73d.js&quot;&gt;&lt;/script&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/taciosantosblog/playerHTML5-blog/tree/master/playerHTML5/post2/example2&quot; target=&quot;_blank&quot;&gt;Link do projeto no github.&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;../../examples/manipular-player-html5-com-js/playerHTML5/post2/example2/&quot; target=&quot;_blank&quot;&gt; Demo &lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;montando-o-mute-do-player&quot;&gt;Montando o mute do player&lt;/h3&gt;
+
+&lt;p&gt;Está é simples: quando o mudo estiver pressionado o range zera, quando não ele volta ao volume anterior. Da pra fazer tudo com jquery:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/taciosantosblog/playerHTML5-blog/tree/master/playerHTML5/post2/example3&quot; target=&quot;_blank&quot;&gt;Link do projeto no github.&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;../../examples/manipular-player-html5-com-js/playerHTML5/post2/example3/&quot; target=&quot;_blank&quot;&gt; Demo &lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;melhorando-a-aparncia&quot;&gt;Melhorando a aparência&lt;/h3&gt;
+
+&lt;p&gt;Agora ja temos um pllayer funcional, mas com um porém, um player feio, de desejar manter as marmotas dos player loucos dos navegadores.
+Resolver isto é simples: temos de colocar um pouco de css:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/taciosantosblog/playerHTML5-blog/tree/master/playerHTML5/post2/example4&quot; target=&quot;_blank&quot;&gt;Link do projeto no github.&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;../../examples/manipular-player-html5-com-js/playerHTML5/post2/example4/&quot; target=&quot;_blank&quot;&gt; Demo &lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;E uma estilização um pouco complexa, mas talvez depois eu faça um post sobre css aplicado sobre &lt;code&gt;input[type=range]&lt;/code&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;Esta Gostando deste post? Saiba que ele faz parte de uma série sobre multimidia aqui do meu blog que vale a pena dar uma conferida:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;../manipular-player-html5-com-js/&quot;&gt;Como manipular Player Html5 com javascript.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;../montando-um-player-com-js/&quot;&gt;Montando um player com html e css.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;concluso&quot;&gt;Conclusão&lt;/h2&gt;
+
+&lt;p&gt;Isto aqui foi so uma base com as ideias para você se divertir, saiba que existem muitas outras opções de multimídia, graças ao html5.
+Se você sentiualguma dificuldade não deixe de conferir o nosso post sobre &lt;a href=&quot;../manipular-player-html5-com-js/&quot;&gt;Como manipular Player Html5 com javascript.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;É não deixe conferir os posts do nosso Blog!!!&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 05 Dec 2016 12:00:00 -0200</pubDate>
+        <link>https://taciosantosblog.github.io///posts/montando-um-player-com-js/</link>
+        <guid isPermaLink="true">https://taciosantosblog.github.io///posts/montando-um-player-com-js/</guid>
+        
+        <category>html5</category>
+        
+        <category>html</category>
+        
+        <category>js</category>
+        
+        <category>player-html5</category>
+        
+        <category>audio</category>
+        
+        <category>video</category>
+        
+        
+        <category>front-end</category>
+        
+      </item>
+    
+      <item>
+        <title>Como fazer café &amp;#35;happyFriday</title>
+        <description>&lt;p&gt;&lt;strong&gt;O café é a coisa mais essencial na vida de um desenvolvedor. Então e bom saber fazer o café do jeito certo.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Trilhando pelos caminhos da programação em java descobri que meu café era tão insuportável que minha mãe adoeceu ao toma-lo e eu não consegui ingeri-lo de tão ruim.&lt;/p&gt;
+
+&lt;p&gt;Sendo assim levando em consideração o decurso da história humana, para o bem de todos e principalmente do meu estômago eu decidi aprender a fazer café do jeito certo.&lt;/p&gt;
+
+&lt;p&gt;Agora que eu ja terminei de contar lorota vamos ver do que vamos precisar:&lt;/p&gt;
+
+&lt;h2 id=&quot;material-necessrio&quot;&gt;Material necessário.&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Água;&lt;/li&gt;
+  &lt;li&gt;Colheres;&lt;/li&gt;
+  &lt;li&gt;Fogo;&lt;/li&gt;
+  &lt;li&gt;Áçucar;&lt;/li&gt;
+  &lt;li&gt;Um Cuador (papel de preferência);&lt;/li&gt;
+  &lt;li&gt;Bules;&lt;/li&gt;
+  &lt;li&gt;e café (óbvio);&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Obs.: caso você use um pó de café ruim o sabor ruim será inteiramente culpa sua!!!&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;modo-de-preparo&quot;&gt;Modo de preparo.&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Ponha a agua no fogo para esquenta-la, mas, não deixe ferver.&lt;/li&gt;
+  &lt;li&gt;Monte a estrutura do cuador, e coloque o po de café, sem amassa-lo contra o filtro.&lt;/li&gt;
+  &lt;li&gt;Derrame a água dando voltas das laterais ao centro, para deixar a borra de café úmidecida. Derrame o resto no centro.&lt;/li&gt;
+  &lt;li&gt;Só esquente denovo se for por na garrafa térmica.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;dicas&quot;&gt;Dicas.&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Não reutilize a borra de café.&lt;/li&gt;
+  &lt;li&gt;Não deixe aágua ferver.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;concluso&quot;&gt;Conclusão.&lt;/h2&gt;
+
+&lt;p&gt;Este foi o primeiro post da série &lt;strong&gt;#happyFriday&lt;/strong&gt;, aquela que você não deve levar a sério por que so tem pidas ruins e besteira.&lt;/p&gt;
+
+&lt;p&gt;Se você gostou deste post compartilhe nas redes sociais e comenta aqui em baixo.&lt;/p&gt;
+
+&lt;p&gt;Boa Sexta-feira, e que você não precise levar trabalho para casa esse fim de semana.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Tacio Santos&lt;/em&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 02 Dec 2016 11:00:00 -0200</pubDate>
+        <link>https://taciosantosblog.github.io///posts/como-fazer-cafe/</link>
+        <guid isPermaLink="true">https://taciosantosblog.github.io///posts/como-fazer-cafe/</guid>
+        
+        <category>cafe</category>
+        
+        <category>tutorial</category>
+        
+        <category>descanso</category>
+        
+        
+        <category>happyFriday</category>
+        
+      </item>
+    
+      <item>
+        <title>Como manipular Player Html5 com javascript.</title>
+        <description>&lt;p&gt;&lt;strong&gt;Aqui eu vou ensinar você a manipular os eventos de play, pausa e volume do player de qualquer navegador.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Caso você deseje &lt;strong&gt;personalizar o player html5 padrão&lt;/strong&gt; você ira se logo ver que não é só baixar um pacote com tema ou algo assim, você terá de praticamente construir todo o controle do mesmo, botões de pausa play e etc.&lt;/p&gt;
+
+&lt;p&gt;Parece Complicado mas não é. Por isso aqui vão algumas dicas do que você vai usar nesta empreitada.&lt;/p&gt;
+
+&lt;h2 id=&quot;prepare-o-seu-html&quot;&gt;Prepare o seu HTML.&lt;/h2&gt;
+
+&lt;h3 id=&quot;tag-audio&quot;&gt;Tag &lt;code&gt;Audio&lt;/code&gt;.&lt;/h3&gt;
+
+&lt;p&gt;Não é muito complicado. Veja aqui como a sintaxe da &lt;strong&gt;tag audio&lt;/strong&gt; é simples:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;audio src=&quot;URL.mp3&quot;&amp;gt;&amp;lt;/audio&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Não aconteceu nada? &lt;em&gt;experimente colocar o atributo controls na tag audio&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;audio src=&quot;URL.mp3&quot; controls&amp;gt;&amp;lt;/audio&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Pronto você já tem um &lt;em&gt;audio&lt;/em&gt; sendo executado no seu navegador :)&lt;/p&gt;
+
+&lt;p&gt;Muito simples não é? mas se você já conhece os navegadores de hoje em dia você já sabe que raramente eles se dão bem com todos os formatos de audio.&lt;/p&gt;
+
+&lt;p&gt;Para evitar problemas você deverá converter os arquivos de audio para &lt;code&gt;.ogg&lt;/code&gt;, &lt;code&gt;.mp3&lt;/code&gt;, e &lt;code&gt;.wav&lt;/code&gt;, e colocar tudo isto no seu site.&lt;/p&gt;
+
+&lt;p&gt;Mas como? retirando o atributo source da tag audio e colocando ta tag source dentro da tag audio:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;source src=&quot;link_do_audio&quot; type=&quot;tipo do audio&quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Se você quiser saber mais sobre a tag audio e os formatos de audio eu recomendo dar uma passada no site da &lt;a href=&quot;http://www.w3schools.com/html/html5_audio.asp&quot; target=&quot;_blank&quot;&gt;W3schools&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Aqui vai um pequeno exemplo do uso da tag audio:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/taciosantosblog/a0ab3e71e3f4fed91f9ba7e838764783.js&quot;&gt;&lt;/script&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/taciosantosblog/playerHTML5-blog/tree/master/playerHTML5/post1/example1&quot; target=&quot;_blank&quot;&gt;Link do projeto no github.&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;../../examples/manipular-player-html5-com-js/playerHTML5/post1/example1/&quot; target=&quot;_blank&quot;&gt; Demo &lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;tag-video&quot;&gt;Tag &lt;code&gt;Video&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;Agora para colocar um video você deve apenas substituir &lt;code&gt;audio&lt;/code&gt; por &lt;code&gt;video&lt;/code&gt;. Veja no exemplo abaixo:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/taciosantosblog/fe33eb2aa9a8818082ec23bdfec9df4b.js&quot;&gt;&lt;/script&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/taciosantosblog/playerHTML5-blog/tree/master/playerHTML5/post1/example2&quot; target=&quot;_blank&quot;&gt;Link do projeto no github.&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;../../examples/manipular-player-html5-com-js/playerHTML5/post1/example2/&quot; target=&quot;_blank&quot;&gt; Demo &lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Aproveite e de uma olhada no site da &lt;a href=&quot;http://www.w3schools.com/html/html5_video.asp&quot; target=&quot;_blank&quot;&gt;W3Schools&lt;/a&gt; pra saber um poquinho mais sobre a tag video.&lt;/p&gt;
+
+&lt;h3 id=&quot;incluindo-arquivo-javascript&quot;&gt;Incluindo arquivo javascript&lt;/h3&gt;
+
+&lt;p&gt;Agora nos vamos enfim para o objetivo deste tutorial: manipular toda esta mídia, que nos aprendemos a por no nosso site, com javascript.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Obs.: nos vamos usar jquery apenas para tornar o tutorial mais simples, mas as funções de manipulação do player funcionam independentemente a biblioteca.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Então aqui está a nossa estrutura:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/taciosantosblog/9f30fcce5d45d35726413b839a392aee.js&quot;&gt;&lt;/script&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/taciosantosblog/playerHTML5-blog/tree/master/playerHTML5/post1/example3&quot; target=&quot;_blank&quot;&gt;Link do projeto no github.&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;../../examples/manipular-player-html5-com-js/playerHTML5/post1/example3/&quot; target=&quot;_blank&quot;&gt; Demo &lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;em&gt;Obs.: você pode usar tanto audio quanto video. Ambas vão usar as mesmas funções em js.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;as-funes-e-atributos-em-javascript-para-manipular-o-player-html5&quot;&gt;As Funções, e atributos, em JavaScript para manipular o player HTML5&lt;/h2&gt;
+
+&lt;h3 id=&quot;play&quot;&gt;Play&lt;/h3&gt;
+
+&lt;script src=&quot;https://gist.github.com/taciosantosblog/24e5edcfa24bdabc528a4b771d9beb93.js&quot;&gt;&lt;/script&gt;
+
+&lt;h3 id=&quot;pause&quot;&gt;Pause&lt;/h3&gt;
+
+&lt;script src=&quot;https://gist.github.com/taciosantosblog/d02dc13224337ceac87cb347ff551a12.js&quot;&gt;&lt;/script&gt;
+
+&lt;h3 id=&quot;volume&quot;&gt;Volume&lt;/h3&gt;
+
+&lt;script src=&quot;https://gist.github.com/taciosantosblog/ba585ac032a8fbf10fc4fc8d5555adfb.js&quot;&gt;&lt;/script&gt;
+
+&lt;h3 id=&quot;currenttime&quot;&gt;CurrentTime&lt;/h3&gt;
+
+&lt;script src=&quot;https://gist.github.com/taciosantosblog/bee9b114e61bba61af92436b8bb79788.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Ufa!!! são todas bem simples agora é só aplicar em botões de player.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/taciosantosblog/42756832779ca49f266dd1e4763c6f57.js&quot;&gt;&lt;/script&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/taciosantosblog/playerHTML5-blog/tree/master/playerHTML5/post1/example4&quot; target=&quot;_blank&quot;&gt;Link do projeto no github.&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;../../examples/manipular-player-html5-com-js/playerHTML5/post1/example4/&quot; target=&quot;_blank&quot;&gt; Demo &lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Legal né? mais podemos melhorar um pouco o botão de play com jquery&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/taciosantosblog/82c076f278aebf6f2da91e9bdf16d070.js&quot;&gt;&lt;/script&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/taciosantosblog/playerHTML5-blog/tree/master/playerHTML5/post1/example5&quot; target=&quot;_blank&quot;&gt;Link do projeto no github.&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;../../examples/manipular-player-html5-com-js/playerHTML5/post1/example5/&quot; target=&quot;_blank&quot;&gt; Demo &lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;Esta Gostando deste post? Saiba que ele faz parte de uma série sobre multimidia aqui do meu blog que vale a pena dar uma conferida:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;../manipular-player-html5-com-js/&quot;&gt;Como manipular Player Html5 com javascript.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;../montando-um-player-com-js/&quot;&gt;Montando um player com html e css.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;concluso&quot;&gt;Conclusão&lt;/h2&gt;
+
+&lt;p&gt;Esta aqui é apenas a base de multimidia para web. se você quiser uma lista completa e mais detalhada das funções em js relacionadas as tags &lt;code&gt;audio&lt;/code&gt; e &lt;code&gt;video&lt;/code&gt; va para o site da &lt;a href=&quot;http://www.w3schools.com/tags/ref_av_dom.asp&quot; target=&quot;_blank&quot;&gt;W3Schools&amp;gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;É não deixe conferir os posts do nosso Blog!!!&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 30 Nov 2016 12:00:00 -0200</pubDate>
+        <link>https://taciosantosblog.github.io///posts/manipular-player-html5-com-js/</link>
+        <guid isPermaLink="true">https://taciosantosblog.github.io///posts/manipular-player-html5-com-js/</guid>
+        
+        <category>html5</category>
+        
+        <category>html</category>
+        
+        <category>js</category>
+        
+        <category>player-html5</category>
+        
+        <category>audio</category>
+        
+        <category>video</category>
+        
+        
+        <category>fron-tend</category>
+        
+      </item>
     
       <item>
         <title>Ola Mundo!</title>

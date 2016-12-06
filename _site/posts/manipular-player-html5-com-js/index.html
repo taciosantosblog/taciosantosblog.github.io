@@ -11,7 +11,9 @@
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel=”alternate” href="https://taciosantosblog.github.io/" hreflang="pt-br" />
     <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+	<link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
     <!-- Customisation  -->
     <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
@@ -33,9 +35,9 @@
         <header class="post-header">
             <h1 class="post-title">Como manipular Player Html5 com javascript.</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="2016-11-26">26 Nov 2016</time>
+                <time class="post-date" datetime="2016-11-30">30 Nov 2016</time>
                 
-                    on front-end
+                    on fron-tend
                 
             </section>
         </header>
@@ -49,9 +51,9 @@
         </header> -->
 
         <!-- <span class="post-meta">
-            <time datetime="2016-11-26">26 Nov 2016</time>
+            <time datetime="2016-11-30">30 Nov 2016</time>
             
-                on front-end
+                on fron-tend
             
         </span> -->
 
@@ -60,7 +62,7 @@
         <section class="post-content">
             <p><strong>Aqui eu vou ensinar você a manipular os eventos de play, pausa e volume do player de qualquer navegador.</strong></p>
 
-<p>Caso você deseje <em>personalizar o player html5 padrão</em> você ira se logo ver que não é so baixar um pacote com tema ou algo assim, você terá de praticamente construir todo o controle do mesmo, botões de pausa play e etc.</p>
+<p>Caso você deseje <strong>personalizar o player html5 padrão</strong> você ira se logo ver que não é só baixar um pacote com tema ou algo assim, você terá de praticamente construir todo o controle do mesmo, botões de pausa play e etc.</p>
 
 <p>Parece Complicado mas não é. Por isso aqui vão algumas dicas do que você vai usar nesta empreitada.</p>
 
@@ -68,17 +70,17 @@
 
 <h3 id="tag-audio">Tag <code>Audio</code>.</h3>
 
-<p>Não é muito complicado. Veja aqui como a sintaxe da tag audio é simples:</p>
+<p>Não é muito complicado. Veja aqui como a sintaxe da <strong>tag audio</strong> é simples:</p>
 
 <p><code>&lt;audio src="URL.mp3"&gt;&lt;/audio&gt;</code></p>
 
-<p>Não aconteceu nada? esperimente colocar o atributo controls na tag audio:</p>
+<p>Não aconteceu nada? <em>experimente colocar o atributo controls na tag audio</em>:</p>
 
 <p><code>&lt;audio src="URL.mp3" controls&gt;&lt;/audio&gt;</code></p>
 
-<p>Pronto você ja tem um audio sendo executado no seu navegador :)</p>
+<p>Pronto você já tem um <em>audio</em> sendo executado no seu navegador :)</p>
 
-<p>Muito simples não é? mas se você ja conhece os navegadores de hoje em dia você ja sabe que raramente eles se dão bem com todos os formatos de audio.</p>
+<p>Muito simples não é? mas se você já conhece os navegadores de hoje em dia você já sabe que raramente eles se dão bem com todos os formatos de audio.</p>
 
 <p>Para evitar problemas você deverá converter os arquivos de audio para <code>.ogg</code>, <code>.mp3</code>, e <code>.wav</code>, e colocar tudo isto no seu site.</p>
 
@@ -86,7 +88,7 @@
 
 <p><code>&lt;source src="link_do_audio" type="tipo do audio"&gt;</code></p>
 
-<p>Se você quiser saber mais sobre a tag audio e os formatos de audio eu recomendo dar uma passada no site da &lt;<a href="http://www.w3schools.com/html/html5_audio.asp" title="HTML5 Tag: audio">W3schools</a>.</p>
+<p>Se você quiser saber mais sobre a tag audio e os formatos de audio eu recomendo dar uma passada no site da <a href="http://www.w3schools.com/html/html5_audio.asp" target="_blank">W3schools</a></p>
 
 <p>Aqui vai um pequeno exemplo do uso da tag audio:</p>
 
@@ -157,7 +159,7 @@
 
 <script src="https://gist.github.com/taciosantosblog/bee9b114e61bba61af92436b8bb79788.js"></script>
 
-<p>Ufa!!! são todas bem simples agora é so aplicar em botões de player.</p>
+<p>Ufa!!! são todas bem simples agora é só aplicar em botões de player.</p>
 
 <script src="https://gist.github.com/taciosantosblog/42756832779ca49f266dd1e4763c6f57.js"></script>
 
@@ -188,6 +190,7 @@
 
 <ul>
   <li><a href="../manipular-player-html5-com-js/">Como manipular Player Html5 com javascript.</a></li>
+  <li><a href="../montando-um-player-com-js/">Montando um player com html e css.</a></li>
 </ul>
 
 <hr />
@@ -227,19 +230,27 @@
             <!-- Share links section -->
             <section class="share">
     <h4>Share this post</h4>
-    <a class="icon-twitter" href="http://twitter.com/share?text=Como manipular Player Html5 com javascript.&amp;url=taciosantosblog.github.io/posts/manipular-player-html5-com-js/"
+    <a class="fa fa-twitter" href="http://twitter.com/share?text=Como manipular Player Html5 com javascript.&amp;url=taciosantosblog.github.io/posts/manipular-player-html5-com-js/"
         onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
         <span class="hidden">Twitter</span>
     </a>
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=taciosantosblog.github.io/posts/manipular-player-html5-com-js/"
+    <a class="fa fa-facebook " href="https://www.facebook.com/sharer/sharer.php?u=taciosantosblog.github.io/posts/manipular-player-html5-com-js/"
         onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
         <span class="hidden">Facebook</span>
     </a>
-    <a class="icon-google-plus" href="https://plus.google.com/share?url=taciosantosblog.github.io/posts/manipular-player-html5-com-js/"
+    <a class="fa fa-google-plus" href="https://plus.google.com/share?url=taciosantosblog.github.io/posts/manipular-player-html5-com-js/"
        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
         <span class="hidden">Google+</span>
     </a>
+    <a class="fa fa-whatsapp" href="whatsapp://send?text=https://taciosantosblog.github.io/posts/manipular-player-html5-com-js/">
+       <span class="hidden">Whatsapp</span>
+    </a>
+
+
+
+
 </section>
+
 
             <!-- Disqus comments -->
             
@@ -252,7 +263,7 @@
 	{
 	    disqus_loaded = true;
 	    var disqus_shortname = 'taciosantosblog-github-io';
-	    var disqus_title = "/posts/player-um";
+	    var disqus_title = "/posts/player1";
 	    var disqus_url = disqus_shortname +'/posts/manipular-player-html5-com-js/';
 	    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 	    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';

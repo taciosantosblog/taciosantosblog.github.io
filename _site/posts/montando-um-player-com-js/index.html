@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Blog do Tacio - Programação, Design & Educação</title>
+    <meta name="description" content="Programação, Design & Educação" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel=”alternate” href="https://taciosantosblog.github.io/" hreflang="pt-br" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+	<link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+    <!-- Customisation  -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+
+</head>
+<body class="home-template">
+
+    <header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        <a class="back-button icon-arrow-left" href="/">Home</a>
+        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Montando um player com js e css.</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2016-12-05">05 Dec 2016</time>
+                
+                    on front-end
+                
+            </section>
+        </header>
+
+<!--         <header class="post-header">
+            <a id="blog-logo" href="https://taciosantosblog.github.io/">
+                
+                    <span class="blog-title">Blog do Tacio</span>
+                
+            </a>
+        </header> -->
+
+        <!-- <span class="post-meta">
+            <time datetime="2016-12-05">05 Dec 2016</time>
+            
+                on front-end
+            
+        </span> -->
+
+        <!-- <h1 class="post-title">Montando um player com js e css.</h1> -->
+
+        <section class="post-content">
+            <p><strong>Neste tutorial você vai aprender a montar um player para o seu site com javascript.</strong></p>
+
+<h2 id="mas-por-que-criar-um-player-com-js">Mas por que criar um player com js?</h2>
+
+<p>Simples: Design. Você pode querer um player que seja visualmente mais semelhante as linhas de design do seu site, ou que tenha a mesma aparência em todos os navegadores.</p>
+
+<p><img src="/assets/images/posts/player2/player-chrome.png" alt="Figura1: Player html5 no chrome" title="Player html5 no chrome" /></p>
+
+<p><img src="/assets/images/posts/player2/player-firefox.png" alt="Figura1: Player html5 no firefox" title="Player html5 no firefox" /></p>
+
+<p>Como você pode ver nas imagens acima o player do chrome e do fairefox são muito diferentes, e também podem não combinar muito com o design do seu site.</p>
+
+<h2 id="montando-o-player">Montando o player</h2>
+
+<p>Se você ja leu o nosso post sobre <a href="/posts/manipular-player-html5-com-js/" title="Como manipular player Html5 com JavaScript">as funções javascript aplicadas ao player</a> você ja deve entender praticamente todos os arquivo abaixo: a única mudança e o uso do <code>intput[type=range]</code> para controlar o volume e o progresso do audio.</p>
+
+<script src="https://gist.github.com/taciosantosblog/34b53fc93608831e968afda123dd0c2a.js"></script>
+
+<script src="https://gist.github.com/taciosantosblog/e1b20a68d6be2460c76f7026dd2e703f.js"></script>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/taciosantosblog/playerHTML5-blog/tree/master/playerHTML5/post2/example1" target="_blank">Link do projeto no github.</a></td>
+      <td><a href="../../examples/manipular-player-html5-com-js/playerHTML5/post2/example1/" target="_blank"> Demo </a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Como foi possível ver na demo do projeto acima, nos tivemos alguns pequenos bugs:</p>
+
+<ul>
+  <li>O controle parece estar meio “doido”</li>
+  <li>O range de volume não zera ao ser acionado o mute.</li>
+  <li>Está muito feio!!!</li>
+</ul>
+
+<h3 id="melhorando-o-controle-de-progresso-do-player">Melhorando o controle de progresso do player</h3>
+
+<p>E meio confuso mais vou tentar explicar: o valor do range e atualizado constantemente, o que inclui o tempo em que você está clicando no seletor do range. Para corrigir isto nos vamos cancelar esta atualização durante o periodo do click, com jquery.</p>
+
+<script src="https://gist.github.com/taciosantosblog/174f39235722c81d4af8fadf58aab73d.js"></script>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/taciosantosblog/playerHTML5-blog/tree/master/playerHTML5/post2/example2" target="_blank">Link do projeto no github.</a></td>
+      <td><a href="../../examples/manipular-player-html5-com-js/playerHTML5/post2/example2/" target="_blank"> Demo </a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="montando-o-mute-do-player">Montando o mute do player</h3>
+
+<p>Está é simples: quando o mudo estiver pressionado o range zera, quando não ele volta ao volume anterior. Da pra fazer tudo com jquery:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/taciosantosblog/playerHTML5-blog/tree/master/playerHTML5/post2/example3" target="_blank">Link do projeto no github.</a></td>
+      <td><a href="../../examples/manipular-player-html5-com-js/playerHTML5/post2/example3/" target="_blank"> Demo </a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="melhorando-a-aparncia">Melhorando a aparência</h3>
+
+<p>Agora ja temos um pllayer funcional, mas com um porém, um player feio, de desejar manter as marmotas dos player loucos dos navegadores.
+Resolver isto é simples: temos de colocar um pouco de css:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/taciosantosblog/playerHTML5-blog/tree/master/playerHTML5/post2/example4" target="_blank">Link do projeto no github.</a></td>
+      <td><a href="../../examples/manipular-player-html5-com-js/playerHTML5/post2/example4/" target="_blank"> Demo </a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>E uma estilização um pouco complexa, mas talvez depois eu faça um post sobre css aplicado sobre <code>input[type=range]</code>.</p>
+
+<hr />
+<p>Esta Gostando deste post? Saiba que ele faz parte de uma série sobre multimidia aqui do meu blog que vale a pena dar uma conferida:</p>
+
+<ul>
+  <li><a href="../manipular-player-html5-com-js/">Como manipular Player Html5 com javascript.</a></li>
+  <li><a href="../montando-um-player-com-js/">Montando um player com html e css.</a></li>
+</ul>
+
+<hr />
+
+<h2 id="concluso">Conclusão</h2>
+
+<p>Isto aqui foi so uma base com as ideias para você se divertir, saiba que existem muitas outras opções de multimídia, graças ao html5.
+Se você sentiualguma dificuldade não deixe de conferir o nosso post sobre <a href="../manipular-player-html5-com-js/">Como manipular Player Html5 com javascript.</a></p>
+
+<p>É não deixe conferir os posts do nosso Blog!!!</p>
+
+
+        </section>
+
+        
+
+        <footer class="post-footer">
+            <!-- If we want to display author's name and bio -->
+            
+                <figure class="author-image">
+                    <a class="img" href="/" style="background-image: url(/assets/images/profile.png)">
+                    <span class="hidden">Tacio Santos's Picture</span></a>
+                </figure>
+                <section class="author">
+                    <!-- Author Name -->
+                    <h4> Tacio Santos </h4>
+                    <!-- Author Bio -->
+                    <p>
+                        Desenvolvedor, estudante e nas poucas horas vagas músico.
+                    </p>
+			<p style="text-align: center; margin-top: 20px">
+			<a href="https://twitter.com/tacios53" target="_blank"><img src="https://ap.imagensbrasil.org/images/2016/11/18/54de15ce0f710d66485a77a385bae07c.png" border="0" style="width:50px;height:50px"></a>
+			<a href="https://br.pinterest.com/tacios53/" target="_blank"><img src="https://ap.imagensbrasil.org/images/2016/11/18/d263b56f45b296ffda9ac54379bbc339.png" border="0" style="width:50px;height:50px"></a>
+			<a href="https://github.com/tacios53" target="_blank"><img src="https://ap.imagensbrasil.org/images/2016/11/18/294bd6099f90961c6a533ad07ec7e8ef.png" border="0" style="width:50px;height:50px"></a> </p>
+                </section>
+            
+
+            <!-- Share links section -->
+            <section class="share">
+    <h4>Share this post</h4>
+    <a class="fa fa-twitter" href="http://twitter.com/share?text=Montando um player com js e css.&amp;url=taciosantosblog.github.io/posts/montando-um-player-com-js/"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="fa fa-facebook " href="https://www.facebook.com/sharer/sharer.php?u=taciosantosblog.github.io/posts/montando-um-player-com-js/"
+        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="fa fa-google-plus" href="https://plus.google.com/share?url=taciosantosblog.github.io/posts/montando-um-player-com-js/"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <span class="hidden">Google+</span>
+    </a>
+    <a class="fa fa-whatsapp" href="whatsapp://send?text=https://taciosantosblog.github.io/posts/montando-um-player-com-js/">
+       <span class="hidden">Whatsapp</span>
+    </a>
+
+
+
+
+</section>
+
+
+            <!-- Disqus comments -->
+            
+                <section class="disqus">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+	var disqus_loaded = false;
+
+	function load_disqus()
+	{
+	    disqus_loaded = true;
+	    var disqus_shortname = 'taciosantosblog-github-io';
+	    var disqus_title = "/posts/player2";
+	    var disqus_url = disqus_shortname +'/posts/montando-um-player-com-js/';
+	    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    var ldr = document.getElementById('disqus_loader');
+	};
+	window.onscroll = function(e) {
+	    if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 800)) {
+		//hit bottom of page
+		if (disqus_loaded==false)
+		    load_disqus()
+	    }
+	};
+</script>
+</section>
+
+            
+
+        </footer>
+
+    </article>
+
+</main>
+
+    <footer class="site-footer clearfix">
+      <section class="copyright">
+        <a href="/">Blog do Tacio</a> &copy; 
+               &bull; All rights reserved.  |  <a href="https://github.com/taciosantosblog/taciosantosblog.github.io">See on Github.com</a>
+      </section>
+      <section class="poweredby">Made with Jekyll using 
+        <a href="http://github.com/rosario/kasper">Kasper theme</a>
+      </section>
+    </footer>
+    
+    <script type="text/javascript" src="/assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+    <!-- Google Analytics Tracking code -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-79159558-2']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>   
+</body>
+</html>

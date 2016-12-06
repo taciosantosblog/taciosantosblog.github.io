@@ -17,6 +17,7 @@
     10. Media Queries (Tablet)
     11. Media Queries (Mobile)
     12. Animations
+    13. Share
 
 */
 
@@ -1772,7 +1773,13 @@ body:not(.post-template) .post-title {
                 transform: translateY(-5px) rotate(-90deg);
     }
 }
+/* ========================================
+	Share
+*/
 
+.share a:before{
+	font-size: 18pt;
+}
 
 /* ==========================================================================
    End of file. Animations should be the last thing here. Do not add stuff
